@@ -66,7 +66,7 @@ EOF
 
 # Edit named.conf.options
 sed -i 's@// forwarders@forwarders@g' /etc/bind/named.conf.options
-sed -i '/^\tforwarders/ s/$/ \n\t\t8.8.8.8/' /etc/bind/named.conf.options
+sed -i '/^\tforwarders/ s/$/ \n\t\t8.8.8.8;/' /etc/bind/named.conf.options
 sed -i 's@// };@};@g' /etc/bind/named.conf.options
 
 # Restart Bind9
